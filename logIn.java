@@ -1,10 +1,11 @@
+import java.awt.Graphics;
 import java.awt.event.*;
 import javax.swing.*;
 
 
 public class logIn extends JFrame implements ActionListener{
 	JLabel username, password, imageLabel;
-	JTextArea uName, pWord, temp;
+	JTextArea uName, pWord;
 	JButton submit, register;
 	ImageIcon image;
 	
@@ -31,7 +32,7 @@ public class logIn extends JFrame implements ActionListener{
 		
 		//add image 
 		image = new ImageIcon("C:\\eclipse\\330twitter\\src\\SPYder.jpg");
-		imageLabel = new JLabel(image,JLabel.CENTER);
+		imageLabel = new JLabel(image);
 		pane.add(imageLabel);
 		
 		// buttons and areas
@@ -39,18 +40,16 @@ public class logIn extends JFrame implements ActionListener{
 		password = new JLabel("Top Secret Password: ");
 		uName = new JTextArea();
 		pWord = new JTextArea();
-		temp =  new JTextArea();
 		submit = new JButton("Login");
 		register = new JButton("Register");
 		
 		// sizing GUI components
 		username.setBounds(400,200,150,25);
 		password.setBounds(400,300,150,25);
-		uName.setBounds(600,200,100,25);
-		pWord.setBounds(600,300,100,25);
-		temp.setBounds(400,500,300,50);
-		submit.setBounds(400,400,100,25);
-		register.setBounds(600,400,100,25);
+		uName.setBounds(600,200,150,25);
+		pWord.setBounds(600,300,150,25);
+		submit.setBounds(400,400,150,25);
+		register.setBounds(600,400,150,25);
 
 	
 		// adding action listeners
@@ -62,7 +61,6 @@ public class logIn extends JFrame implements ActionListener{
 		pane.add(password);
 		pane.add(uName);
 		pane.add(pWord);
-		pane.add(temp);
 		pane.add(submit);
 		pane.add(register);
 		pane.setLayout(null);
@@ -75,10 +73,11 @@ public class logIn extends JFrame implements ActionListener{
 		if(e.getActionCommand().equals("Login")){
 			String userName = uName.getText();
 			String passWord = pWord.getText();
-			temp.setText("You pressed login" + "\nUsername: "+ userName+ "\nPassword: "+passWord);
+			userProfile profile = new userProfile();
 		}
 		else if (e.getActionCommand().equals("Register")){
-			temp.setText("You pressed register");
+			userRegister register = new userRegister();
+			this.dispose();
 		}
 		
 	}
