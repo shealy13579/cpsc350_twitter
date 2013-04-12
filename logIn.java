@@ -24,7 +24,7 @@ public class logIn extends JFrame implements ActionListener{
 		JFrame frame = new JFrame();
 		JPanel pane = new JPanel();
 		
-		// sizing, making visible, and adding pane to Frame
+		//sizing, making visible, and adding pane to Frame
 		frame.setLayout(null);
 		frame.setVisible(true);
 		frame.setSize(1600,850);

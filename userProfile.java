@@ -19,11 +19,11 @@ public class userProfile extends JFrame implements ActionListener{
 	
 	private void GUI(){
 		
-		// gui components
+		//gui components
 		JFrame frame = new JFrame();
 		JPanel pane = new JPanel(); 
 		
-		// sizing, making visible, and adding pane to Frame
+		//sizing, making visible, and adding pane to Frame
 		frame.setLayout(null);
 		frame.setVisible(true);
 		frame.setSize(1600,850);
